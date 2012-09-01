@@ -11,14 +11,10 @@ tthen = tnow
 numprimes_str = '0'
 
 def signal_handler(signal, frame):
-    '''Called when ^c is pressed. Signals the program to exit.'''
     global signaled
     signaled = True
 
 def read_file(filename):
-    '''Called on program entry. Reads in all prime numbers from
-    a file, or simply begins a new list of primes if the file
-    cannot be opened (for example if it doesn't exist).'''
     global initprimes
     global numprimes_str
     primes = []
@@ -34,24 +30,16 @@ def read_file(filename):
     return primes
 
 def phun():
-    '''Called every time 100 new primes are found.
-    Writes a new character to the progress bar.'''
     sys.stdout.write('=')
     sys.stdout.flush()
 
 def ptho_write(primes, filename):
-    '''Called every time 1000 new primes are found.
-    Dumps all new primes to the file. If the file
-    doesn't exist it is created here.'''
     fout = open(filename, 'a')
     for p in primes[-1000:]:
         fout.write(str(p) + '\n')
     fout.close()
 
 def ptho_time():
-    '''Called every time 1000 new primes are found.
-    Allows for timing how many primes are being
-    found per second.'''
     global tnow
     global tthen
 
@@ -62,11 +50,6 @@ def ptho_time():
     return str(persec) + ' primes/sec '
 
 def ptho_print(primes):
-    '''Called every time 1000 new primes are found.
-    Rewrites the output string including how many
-    (total) primes have been found, the progress bar
-    (tracking progress to 1000 new primes), and the
-    rate at which primes are being found.'''
     global numprimes_str
     time_str = ptho_time()
     
@@ -84,13 +67,10 @@ def ptho_print(primes):
     sys.stdout.flush()
 
 def ptho(primes, filename):
-    '''Calls other functions every time 1000 new
-    primes are found.'''
     ptho_write(primes, filename)
     ptho_print(primes)
 
 def find_primes(primes, filename):
-    '''Main prime finding loop.'''
     index = primes[-1] + 1
 
     while not signaled:
@@ -123,7 +103,6 @@ def find_primes(primes, filename):
     sys.stdout.flush()
 
 def main():
-    '''Handles initial printing, calls file read, and calls main loop'''
     sys.stdout.write('Start...\n')
     sys.stdout.flush()
     
