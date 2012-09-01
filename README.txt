@@ -5,7 +5,9 @@ Copyright 2012 (c) by Christopher J. Wald
 This script is designed to find prime numbers based on a method
 described below. It is not the most highly optimized (as shown by the
 initial file read if nothing else), but neither is it the slowest and
-least optimized. The script should be exited with ^c.
+least optimized. The script should be exited with ^c to invoke the
+final file write, though fewer than 1000 primes will be lost if exited
+by other means.
 
 This file was designed with Python version 3.2 in mind, but should
 work on any version that supports the Argparse module.
