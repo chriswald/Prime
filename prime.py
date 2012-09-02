@@ -24,7 +24,7 @@ def read_file(filename):
     primes = []
     try:
         fin = open(filename, 'r')
-        for line in fin.readlines():
+        for line in fin:
             primes.append(int(line))
         fin.close()
         initprimes = len(primes)
