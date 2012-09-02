@@ -17,15 +17,16 @@ Usage
 
 python prime.py [-f file]
 
--f      The name of the file for the script to read existing prime
-	numbers from and save new prime numbers to. The file is
-	created if not found. If this flag is not provided a default
-	name of "primes.txt" is used. This file can grow to be several
-	hundred megabytes large and should be stored on a device that
-	can handle such. The file is written to at two times. Every
-	time 1000 new primes are found they are dumped to the file,
-	and when the script is exited any primes found since the last
-	write are dumped.
+#-f
+ The name of the file for the script to read existing prime
+ numbers from and save new prime numbers to. The file is
+ created if not found. If this flag is not provided a default
+ name of "primes.txt" is used. This file can grow to be several
+ hundred megabytes large and should be stored on a device that
+ can handle such. The file is written to at two times. Every
+ time 1000 new primes are found they are dumped to the file,
+ and when the script is exited any primes found since the last
+ write are dumped.
 
 Method
 ======
