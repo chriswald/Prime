@@ -17,7 +17,7 @@ Usage
 
 python prime.py [-f file]
 
-#-f
+###-f
  The name of the file for the script to read existing prime
  numbers from and save new prime numbers to. The file is
  created if not found. If this flag is not provided a default
