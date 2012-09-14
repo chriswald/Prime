@@ -119,7 +119,7 @@ def find_primes(primes, filename):
         fout.write(str(p) + '\n')
     fout.close()
 
-    sys.stdout.write('\n' + str(len(primes) - initprimes) + ' primes found.')
+    sys.stdout.write('\n' + str(len(primes) - initprimes) + ' primes found.\n')
     sys.stdout.flush()
 
 def main():
