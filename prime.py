@@ -91,7 +91,10 @@ def ptho(primes, filename):
 
 def find_primes(primes, filename):
     '''Main prime finding loop.'''
+    global tthen
     index = primes[-1] + 1
+
+    tthen = time.time()
 
     while not signaled:
         isprime = True
