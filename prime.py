@@ -92,6 +92,7 @@ def ptho(primes, filename):
 def find_primes(primes, filename):
     '''Main prime finding loop.'''
     global tthen
+    global signaled
     index = primes[-1] + 1
 
     tthen = time.time()
@@ -134,7 +135,7 @@ def main():
     filename = 'primes.txt'
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--file', help='Text file to read from and write to')
+    parser.add_argument('-f', '--file', help='Text file to read from and write to.')
     args = parser.parse_args()
 
     if not args.file == None:
